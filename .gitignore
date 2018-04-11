@@ -55,3 +55,5 @@ packages/**
 *.resharper
 *.ncrunch*
 *.ndproj
+
+.vscode

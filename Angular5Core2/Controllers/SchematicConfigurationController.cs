@@ -1,12 +1,9 @@
 ﻿using Angular5Core2.Models;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using System;
+using System.Threading.Tasks;
 
 namespace Angular5Core2.Controllers
 {
@@ -16,7 +13,7 @@ namespace Angular5Core2.Controllers
         protected DBEntities UserDB { get; }
         protected ILogger Logger { get; }
 
-        public SchematicConfigurationController(DBEntities dB, ILogger logger)
+        public SchematicConfigurationController(DBEntities dB, ILogger<SchematicConfigurationController> logger)
         {
             Logger = logger ?? throw new ArgumentNullException(nameof(logger));
             UserDB = dB ?? throw new ArgumentNullException(nameof(dB));
